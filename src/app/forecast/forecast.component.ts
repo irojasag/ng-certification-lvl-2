@@ -20,7 +20,7 @@ export class ForecastComponent implements OnInit {
         this.weatherService
           .getZipcodeForecast(params.zipcode)
           .subscribe((response) => {
-            console.log(response);
+
             this.forecast = { name: response.city.name, list: [] };
 
             for (let i = 0; i < 5; i++) {
@@ -58,6 +58,5 @@ export class ForecastComponent implements OnInit {
           });
       }
     });
-    // this.weatherService.getZipcodeForecast()
   }
 }
