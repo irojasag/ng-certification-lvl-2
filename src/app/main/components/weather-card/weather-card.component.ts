@@ -36,7 +36,6 @@ export class WeatherCardComponent implements OnInit {
               Clear: 'sun',
             }[main] || 'sun',
         };
-
       });
   }
 

@@ -17,7 +17,9 @@ export class WeatherService {
     );
   }
 
-  public getZipcodeForecast(zipcode: string): Observable<any[]> {
-    return null;
+  public getZipcodeForecast(zipcode: string): Observable<any> {
+    return this.http.get<any>(
+      `${this.apiUrl}forecast?zip=${zipcode},US&appid=${this.apiKey}`
+    );
   }
 }
