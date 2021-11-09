@@ -1,1 +1,8 @@
-<zipcode-form></zipcode-form>
+<div class="container-fluid">
+  <zipcode-form [refreshSubject]="refreshSubject"></zipcode-form>
+  <weather-card
+    *ngFor="let zipcode of zipcodes"
+    [zipcode]="zipcode"
+    [refreshSubject]="refreshSubject"
+  ></weather-card>
+</div>
